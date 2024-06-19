@@ -1,0 +1,116 @@
+/* font styles*/
+.b { font-weight: bold; text-decoration: underline;}
+
+.gray { color: #777777; }
+.silver { color: #999999; }
+.light-silver { color: #AAAAAA; }
+.moon-gray { color: #CCCCCC; }
+.light-gray { color: #EEEEEE; }
+.near-white { color: #F4F4F4; }
+.white { color: #FFFFFF; }
+.dark-red { color: #E7040F; }
+.red { color: #FF4136; }
+.light-red { color: #FF725C; }
+.orange { color: #FF6300; }
+.gold { color: #FFB700; }
+.yellow { color: #FFD700; }
+.light-yellow { color: #FBF1A9; }
+.light-purple { color: #A463F2; }
+.dark-pink { color: #D5008F; }
+.hot-pink { color: #FF41B4; }
+.pink { color: #FF80CC; }
+.light-pink { color: #FFA3D7; }
+.dark-green { color: #137752; }
+.green { color: #19A974; }
+.light-green { color: #9EEBCF; }
+.blue { color: #357EDD; }
+.light-blue { color: #96CCFF; }
+.lightest-blue { color: #CDECFF; }
+.washed-blue { color: #F6FFFE; }
+.washed-green { color: #E8FDF5; }
+.washed-yellow { color: #FFFCEB; }
+.washed-red { color: #FFDFDF; }
+.black { color: #000000; }
+.near-black { color: #111111; }
+.dark-gray { color: #333333; }
+.mid-gray { color: #555555; }
+.gray { color: #777777; }
+.dark-red { color: #E7040F; }
+.red { color: #FF4136; }
+.purple { color: #5E2CA5; }
+.light-purple { color: #A463F2; }
+.dark-pink { color: #D5008F; }
+.dark-green { color: #137752; }
+.navy { color: #001B44; }
+.dark-blue { color: #2C3A8B; }
+.blue { color: #357EDD; }
+
+.bttn {
+  display: inline-block;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  border-radius: 0.25em;
+  background-color: #2C3A8B;
+  color: white;
+  font-weight: bold;
+}
+
+.bttn2 {
+  display: inline-block;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  border-radius: 0.25em;
+  background-color: #E27F31;
+  color: white;
+  font-weight: bold;
+}
+
+.bttn3 {
+  display: inline-block;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  border-radius: 0.25em;
+  background-color: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+.small{
+  font-size: 0.7em;
+  color: #777777;
+}
+
+#title-slide .title {
+  color: #FFF;
+}
+
+#title-slide .subtitle {
+  color: #E8FDF5;
+}
+
+#title-slide .quarto-title-author-name {
+  color: #273B8D;
+  background: #FFF200;
+  border-radius: 5px;
+  padding: 10px 24px;
+  margin: 10px 0;
+  font-family: 'Raleway';
+}
+
+.reveal .footer{
+  background: rgb(69,109,178);
+  background: linear-gradient(90deg, rgba(69,109,178,1) 25%, rgba(97,186,192,1) 50%, rgba(140,202,209,1) 75%, rgba(250,246,190,1) 100%);
+  color: #FFF;
+  padding: 0.8em;
+  font-size: 2em;
+}
+
+.reveal .slide-logo{
+  z-index: 999 !important;
+  bottom: 0.4em !important;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal li{
+  font-family: 'Raleway';
+} 
+

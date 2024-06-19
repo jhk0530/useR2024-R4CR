@@ -1,0 +1,697 @@
+---
+title: "Share your R, with R"
+title-slide-attributes:
+  data-background-image: background0.png
+  data-background-size: contain
+  data-background-color: "#2C3A88"
+  data-background-opacity: '1'
+subtitle: "R4CR: Education for Clinical Researchers via Quarto"
+author: "Jinhwan Kim @ Zarathu"
+
+format: 
+  revealjs:
+    background-image: backgroundC.png
+    css: styles.css
+    smaller: true
+    progress: true
+    controls: true
+    logo: logo.png
+    footer: "R4CR: R Education for Clinical Researchers via Quarto"
+    theme: default
+    slide-number: true
+---
+
+## [In this talk...]{.slidetitle}
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### ✅ I'll cover
+
+-   [How to share]{.b .dark-blue} [own R contents online without financial, technical cost]{.small}
+-   [Things I considered]{.b .dark-blue} [before choosing Quarto]{.small}
+-   [Key steps]{.b .dark-blue} [to build web page with simple example]{.small}
+:::
+
+::: {.column width="50%"}
+#### ❌ I'll not cover
+
+-   [Detailed guide]{.b .gray} [for R / Quarto / revealjs]{.small}
+-   [Make]{.small} [own R content]{.b .gray}
+-   [Detailed instructions for]{.small} [customized functions]{.b .gray}
+:::
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+💡 I'll share experiences of building web page for teaching R using Quarto.
+
+**If you have own R contents and want to share it in online, this talk will be helpful for you.**
+:::
+:::
+
+## What is [R4CR]{.b .dark-blue}
+
+::: {style="font-size: 80%"}
+-   [R]{.b .dark-blue} [for]{.b .dark-blue} [C]{.b .dark-blue}linical [R]{.b .dark-blue}esearchers. [(Inspired by [R4DS](https://r4ds.hadley.nz/), [R4CSR](https://r4csr.org/), and strongly [R4SS](https://github.com/SMaRTWorkshops/r4ss))]{.small}
+-   Contents: [related with R]{.small}
+-   Custom features: [util (external service)]{.small}
+-   made with `R` and `Quarto`
+:::
+
+::: columns
+::: {.column width="50%"}
+![](lecture.png){fig-align="center" width="80%"}
+:::
+
+::: {.column width="50%"}
+![](chat.png){fig-align="left" width="80%"}
+:::
+:::
+
+## R in Clinical Research
+
+::: {style="font-size: 80%"}
+
+::: columns
+
+::: {.column width="50%"}
+
+[Clinical]{.bttn} [or Medical field is one of the most important area that R is used.]{.small}
+
+Because
+
+- Management of Data
+- Statistic analysis
+- Re-shape output [for use by a variety of audiences, such as regulators and academics.]{.small}
+
+Both SAS and R used, but R is increasingly [popular due to its flexibility and open-source nature.]{.small} 
+
+:::
+
+::: {.column width="50%"}
+
+- [Traditionally,]{.small} Researchers focus on the design and execution of the study [and leave the coding to professional statistical programmers and statisticians]{.small}
+
+- [Now, researchers are increasingly ]{.small} coding themselves.
+
+- [Zarathu is a research support organisation, recently]{.small} started training researchers to code to [meet this demand.]{.small}
+
+:::
+
+:::
+
+:::
+
+
+## Why this matter?
+
+::: {style="font-size: 80%"}
+
+::: columns
+
+::: {.column width="50%"}
+
+-   [R is used extensively]{.bttn} [in various data fields including medical / academy.]{.small}
+
+-   [Many R contents]{.bttn} [(`slide`, `recording`, `document`, `report`) existed in various location.]{.small}
+
+-   [Need to]{.small} [organize and share]{.bttn} [to be used easily.]{.small}
+
+
+:::
+
+::: {.column width="50%"}
+
+- [Also our team, [Zarathu](https://zarathu.com/) had a ]{.small} number of R content [for medical school / pharma members]{.small}
+
+- [Used for seminars, but need to]{.small} create a new repository [for it each time.]{.small}
+
+:::
+
+:::
+
+
+
+:::
+
+## Before
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+In Github [(README.MD)]{.small}
+
+------------------------------------------------------------------------
+
+#### 📔 Previous presentations
+
+-   [COOL PRESENTATION]{.b .blue}
+-   [AWESOME LECTURE NOTE]{.b .blue}
+-   [NICE TALK]{.b .blue}
+
+:::
+
+::: {.column width="50%"}
+![](slide.png){fig-align="center" width="80%"}
+:::
+:::
+
+[Not bad,]{.bttn} but information are not organized well.
+
+-   Browse all [(long)]{.small} readme
+-   Click each and see in new page
+-   Problem if multiple contents are "connected"
+:::
+
+## Principles
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Should
+
+-   [Support natively]{.bttn} [R contents]{.small}
+
+-   [Can manage with in]{.small} [one place]{.bttn}
+
+-   [Can custom]{.bttn} [even external service]{.small}
+:::
+
+::: {.column width="50%"}
+#### Avoid to
+
+-   [Use]{.small} ["Other languages"]{.bttn2} [except R]{.small}
+
+-   [Spend the extra money]{.bttn2} [to do this]{.small}
+:::
+:::
+:::
+
+## Considered methods
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="33%"}
+#### 🗂️ Before
+
+[Github README]{.bttn3} [for link each contents]{.small}
+:::
+
+::: {.column width="33%"}
+#### 🤔 Options
+
+-   LMS: [Pay]{.bttn2}
+-   Blog: [not R]{.bttn2}
+-   Professional webpage[Pay]{.bttn2}
+-   Slide service: [not R]{.bttn2}
+:::
+
+::: {.column width="33%"}
+#### ✅ Final
+
+[Website on]{.small} [Github Pages]{.bttn} [with]{.small} [Quarto Blog]{.bttn}
+
+::: {.callout-tip appearance="simple" icon="false"}
+💡 Vercel, Netlify may works
+:::
+:::
+:::
+:::
+
+## Benefit of using Quarto
+
+::: {style="font-size: 80%"}
+-   [Build with]{.small} Markdown, R
+
+-   Support R [code and [Results](https://quarto.org/docs/computations/r.html)]{.small}
+
+-   [Works well with]{.small} [Rstudio](https://quarto.org/docs/get-started/hello/rstudio.html)
+
+-   [Available to]{.small} customize [with JavaScript]{.small}
+
+-   Website, Presentation[, Dashboard, Books, and [More](https://quarto.org/docs/guide)]{.small}
+
+-   [Deploy via [Github](https://quarto.org/docs/publishing/github-pages.html)]{.small} without cost
+
+::: {.callout-note appearance="simple" icon="false"}
+💡 There are a lot of guide for learn Quarto, You should try
+:::
+:::
+
+## 🗿 4 Key steps to build R4CR
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Summary
+
+```{mermaid}
+graph TB;
+  
+  R4CR --> website
+  
+  subgraph website
+    pres(presentation) --> embed(embed)
+    navbar(navbar)
+    custom(archive) --> slider(slider)
+  end
+  style website fill:#FFF;
+  style R4CR fill:#8AC0AE,color:#FFF,stroke:none;
+  style navbar fill:#2C3A8B,color:#FFF,stroke:none;
+  style embed fill:#2C3A8B,color:#FFF,stroke:none;
+  style slider fill:#2C3A8B,color:#FFF,stroke:none;
+  
+```
+:::
+
+::: {.column width="50%"}
+[1.]{.bttn} [Build]{.small} [Quarto Website](https://quarto.org/docs/websites/)
+
+-   [Build contents as [Quarto Presentation](https://quarto.org/docs/presentations/)]{.small}
+
+    -   [PDF also fine]{.small}
+
+-   [Decorate website]{.small}
+
+    [2.]{.bttn} [Organize contents using]{.small} navbar
+
+    [3.]{.bttn} Embeding [slide]{.small}
+
+    [4.]{.bttn} [Customize]{.small} slick (slider)
+:::
+:::
+:::
+
+## 1. Build Quarto Website
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+[Start from Rstudio's]{.small} [New project]{.bttn} -\> [Quarto website]{.bttn} [feature.]{.small}
+
+![](quarto1.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+#### Structure
+
+```{mermaid}
+graph TD;
+
+  subgraph R4CR
+    index.qmd;
+    about.qmd;
+    _quarto.yml;
+    styles.css;
+  end
+  style R4CR fill:#FFF,stroke:#8AC0AE,stroke-width:3px;;
+
+```
+:::
+:::
+:::
+
+## 2. Organize contents using navbar
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Example code
+
+::: panel-tabset
+### \_quarto.yml
+
+``` yaml
+navbar:
+    right:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Day 1
+        menu: 
+          - text: Brief
+            href: day1/day1.qmd
+          - text: baseR
+            href: day1/baseR.qmd
+          - text: ------
+          - text: Tidyverse
+          - text: magrittr
+            href: day1/magrittr.qmd  
+      - icon: github
+        href: https://github.com/ID/REPO
+```
+:::
+:::
+
+::: {.column width="50%"}
+#### Result
+
+![](navbar.png){fig-align="center"}
+:::
+:::
+
+-   Not need to explore [very long list of readme]{.small}
+:::
+
+## 3. Embeding slide
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Example code
+
+::: panel-tabset
+### styles.css
+
+``` css
+.slide-deck {
+  border: 3px solid #dee2e6;
+  width: 100%;
+  height: 475px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+```
+
+### baseR.qmd
+
+``` markdown
+---
+format: 
+  html:
+    css: ../styles.css
+---
+
+<iframe class="slide-deck" src="slide.baseR.html"></iframe>
+```
+
+### slide.baseR.qmd
+
+``` markdown
+---
+format: revealjs
+---
+
+# Title
+```
+:::
+
+#### Result
+
+![](slides.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+#### Structure
+
+```{mermaid}
+graph TD;
+
+  subgraph R4CR
+    styles.css;
+    day1;
+  end
+  
+  subgraph day1
+    baseR.qmd;
+    slide.baseR.qmd;
+  end
+
+  style R4CR fill:#FFF,stroke:#8AC0AE,stroke-width:3px;
+  style day1 fill:#FFF,stroke:#137752,stroke-width:3px;
+  
+  style styles.css fill:#2C3A8B,color:#FFF,stroke:none;
+  style baseR.qmd fill:#2C3A8B,color:#FFF,stroke:none;
+  style slide.baseR.qmd fill:#2C3A8B,color:#FFF,stroke:none;
+```
+
+-   [modify slide container with]{.small} `.slide-deck` [in CSS]{.small}
+-   iframe option, [see [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)]{.small}
+:::
+:::
+:::
+
+## 4. Customize ([slick](https://github.com/kenwheeler/slick))
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Example code
+
+::: panel-tabset
+### archive.qmd
+
+``` markdown
+---
+title: "archives"
+listing:
+  contents: talks
+  sort: "date desc"
+  type: grid
+  image-height: 300px
+format: html
+include-in-header: talks/slider.html
+---
+<div class="slider">
+  <img src="talks/logo/image1.png"/> 
+
+  ...
+</div>
+```
+
+### index.qmd
+
+``` markdown
+---
+image: useR.png (Thumbnail)
+format: html
+---
+
+## Title
+
+Contents
+```
+
+### Slider.html
+
+``` html
+<script src="jquery-3.3.1.min.js"></script>
+<script src="slick.min.js"></script>
+<link rel="stylesheet" href="slick.css" />
+<link rel="stylesheet" href="slick-theme.css" />
+
+<script>
+  $(document).ready(function() {
+    $('.slider').slick({speed: 500, ...});
+  });
+</script>
+
+<style>
+  .slider {
+    width: 1000px;
+    margin: 0px auto;
+  }
+</style>
+```
+:::
+
+-   [Include]{.small} `slider.html` in `archive.qmd`
+-   [`slider.html` contains JavaScript and CSS files]{.small} for slick
+-   Common assets [are located in `talks` folder in `talks`]{.small}
+-   [Each index.qmd]{.small} separated folder
+-   [`archive.qmd` is]{.small} [Quarto blog](https://quarto.org/docs/websites/website-blog.html) [to show multiple element as card with thumbnails]{.small}
+:::
+
+::: {.column width="50%"}
+#### Result
+
+![](archive.gif){fig-align="center" width="100%"}
+
+#### Structure
+
+```{mermaid}
+graph TD;
+
+  subgraph R4CR
+    archive.qmd;
+    talks;
+  end
+
+  subgraph talks
+    logo;
+    slider.html;
+    2024-06-04-useR;
+  end
+
+  subgraph 2024-06-04-useR
+    index.qmd;
+    useR.png;
+  end
+
+  2024-06-04-useR --> index.qmd;
+  2024-06-04-useR --> useR.png;
+  
+  style R4CR fill:#FFF,stroke:#8AC0AE,stroke-width:3px;
+  style talks fill:#FFF,stroke:#137752,stroke-width:3px;
+  style 2024-06-04-useR fill:#FFF,stroke:#137752,stroke-width:3px;
+  
+  style logo fill:#137752,color:#FFF,stroke:none;
+  
+  style archive.qmd fill:#2C3A8B,color:#FFF,stroke:none;
+  style index.qmd fill:#2C3A8B,color:#FFF,stroke:none;
+  style slider.html fill:#2C3A8B,color:#FFF,stroke:none;
+```
+:::
+:::
+:::
+
+## External Services
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="33%"}
+-   [SDK, API (Javascript code) using]{.small} [include]{.bttn} [similar with previous slick]{.small}
+
+-   [Implement]{.small} [button]{.bttn} [using HTML with `onclick`, send data as JSON to other HTML page using [axios](https://github.com/axios/axios)]{.small}
+
+-   [Github page is possible to]{.small} [communicate with external]{.bttn}
+
+::: aside
+[https://quarto.org/docs/output-formats/html-basics.html#includes]{.small}
+:::
+:::
+
+::: {.column width="66%"}
+::: panel-tabset
+### CS chat
+
+![](chat.png){fig-align="center" width="60%"}
+
+### pay
+
+![](pay1.png){fig-align="center" width="45%"} ![](pay2.png){fig-align="center" width="45%"}
+:::
+:::
+:::
+:::
+
+## Deploy
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+-   [Github page](https://quarto.org/docs/publishing/github-pages.html) [(very easy)]{.small}
+
+-   [Add custom domain]{.small} name with `CNAME` [(not essential, need to pay)]{.small}
+:::
+
+::: {.column width="50%"}
+#### Final result
+
+<https://education.zarathu.com/>
+
+::: {.callout-warning appearance="simple" icon="false"}
+💡 Note
+
+-   This site mainly built with Korean 🇰🇷
+-   Payment disabled for now
+:::
+:::
+:::
+:::
+
+## Challenges with Quarto
+
+::: {style="font-size: 80%"}
+
+1.  Experience of [R]{.bttn}, is necessary or [google sites](https://sites.google.com/) may work better
+2. [Static site]{.bttn}, doesn't require "login" so EVERY user can see EVERY contents
+
+:::
+
+## Recap R4CR
+
+::: {style="font-size: 80%"}
+::: columns
+::: {.column width="50%"}
+#### Features
+
+-   [R4CR]{.bttn}: [is managing system for clinical and R contents]{.small}
+
+-   [Manage]{.bttn} [webpage and contents in single project]{.small}
+
+-   [R]{.bttn} [and]{.small} [Markdown (Quarto)]{.bttn}
+
+-   [Free]{.bttn}
+
+-   [Custom]{.bttn}
+:::
+
+::: {.column width="50%"}
+#### with R4CR
+
+- [Provided R lecture]{.bttn} [for several hospitals and universities as expected]{.small}
+
+- [Since we shared contents as public, it]{.small} [helped us with recruiting]{.bttn} [process.]{.small}
+
+- [We could]{.small} [write a book]{.bttn} [based on these materials.]{.small}
+
+ 
+:::
+:::
+:::
+
+## Next steps
+
+::: {style="font-size: 80%"}
+-   [Interactive]{.bttn} [with `webR` / `shinylive`]{.small}
+
+-   [More]{.bttn} [R / Clinical contents]{.small}
+
+-   [I18N]{.bttn} [using [profile](https://quarto.org/docs/projects/profiles.html)]{.small}
+
+-   [Private R4CR]{.bttn}
+
+-   [Template]{.bttn} [of R4CR]{.small}
+
+
+:::
+
+## Questions?
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: library for icons
+library(bsicons)
+```
+
+::: columns
+::: {.column width="50%"}
+![](cat3_1_question.png){fig-align="center" width="60%"}
+:::
+
+::: {.column width="50%"}
+
+#### Helpful resources
+
+-   [Definitely,]{.small} [Quarto guide](https://quarto.org/docs/guide/)
+
+-   Code repository [for **this** quarto presentation]{.small}
+
+---
+
+`r bs_icon("envelope")` [hwanistic\@gmail.com](mailto:hwanistic@gmail.com)
+
+`r bs_icon("linkedin", class = 'dark-blue')` [in/jinhwan-kim](https://www.linkedin.com/in/jinhwan-kim/)
+
+`r bs_icon("github")` [jhk0530](https://github.com/jhk0530)
+
+
+:::
+:::
+
+::: aside
+image from irasutoya
+:::
